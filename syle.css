@@ -16,23 +16,72 @@ footer {
 .chat-box {
     padding: 32px;
     height: calc(100dvh - 140px);
-    background-color: url('');
+    background-image: url('img/background.jpg');
+    overflow-y: auto;
 }
 
 .chat-row {
     display: flex;
-    justify-content: flex-end;
     margin-bottom: 32px;
 }
 
-.chat-message{
+.chat-message {
     padding: 8px;
     border-radius: 8px;
-    background-color: #d5f9ba;
     box-shadow: 3px 3px 10px black;
 }
 
-time{
-    font-size: 11px;
-    color: ;
+.chat-row.sent {
+    justify-content: flex-end;
+
 }
+
+.chat-row.received {
+    justify-content: flex-start;
+}
+
+.chat-row.sent>.chat-message {
+    background-color: #d5f9ba;
+
+}
+
+.chat-row.received>.chat-message {
+    background-color: #ffffff;
+}
+
+time {
+    font-size: 11px;
+    color: #aaaaaa;
+}
+
+
+/* FONDO PAGINA */
+
+footer{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+input{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+}
+
+button{
+    font-size: 25px;
+    color: #666;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:hover{
+    color: blue;
+}
+
+
+/* REGOLE DI CSS PER L'INTESTAZIONE */

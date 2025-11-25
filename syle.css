@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    padding: 8px 32px;
+    height: 70px;
+    background-color: #ece5dd;
+}
+
+/* REGOLE DI STILE DELLA CHAT */
+
+.chat-box {
+    padding: 32px;
+    height: calc(100dvh - 140px);
+    background-color: url('');
+}
+
+.chat-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+}
+
+.chat-message{
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #d5f9ba;
+    box-shadow: 3px 3px 10px black;
+}
+
+time{
+    font-size: 11px;
+    color: ;
+}

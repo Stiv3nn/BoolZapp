@@ -21,3 +21,7 @@ const messages = [
 
 ];
 
+// #OPERAZIONI DI AVVIO PAGINA
+
+// 3 --> Svuoto la chat tramite innerHTML che è uguale a ''
+chatBox.innerHTML = '';

@@ -1,4 +1,4 @@
-// ?OPERAZIONI DI PREPARAZIONE
+// OPERAZIONI DI PREPARAZIONE
 
 // 1 --> Recupero gli elementi di interesse dalla pagina
 const input = document.querySelector('input');
@@ -21,13 +21,21 @@ const messages = [
 
 ];
 
-// ?OPERAZIONI DI AVVIO PAGINA
+// OPERAZIONI DI AVVIO PAGINA
 
 // 3 --> Svuoto la chat tramite innerHTML che è uguale a ''
 chatBox.innerHTML = '';
 
 // 4 --> Per ciascuno dei messaggi.....(ciclo for of)
 for (const message of messages) { // per ognuno dei messaggi creami una variabile messaggio
-    console.log(message.text);
-
+    chatBox.innerHTML += `
+    <div class="chat-row ${message.type}">
+            <div class="chat-message">
+                <p>${message.text}</p>
+                <time datetime="${message.time}">
+                    ${message.time}
+                </time>
+            </div>
+        </div>
+    `
 }

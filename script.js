@@ -39,3 +39,22 @@ for (const message of messages) { // per ognuno dei messaggi creami una variabil
         </div>
     `
 }
+
+// OPERAZIONE DI INTERAZIONE CON L'UTENTE
+
+// 5 --> al click del button fai qualcosa, invia. - come? trmaite gli eventi di javascript
+button.addEventListener('click', function(){
+
+    // 6 --> recupero il testo inserito dall'utente - come faccio? grazie a ".value"
+    const insertedText = input.value;
+    
+    // 7 --> creo un nuovo messaggio
+    const newMessage = {
+        type: 'sent',
+        text: insertedText,
+        time: new Date().toLocaleDateString()
+    }
+
+    console.log(newMessage);
+})
+

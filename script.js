@@ -24,21 +24,24 @@ const messages = [
 // OPERAZIONI DI AVVIO PAGINA
 
 // 3 --> Svuoto la chat tramite innerHTML che è uguale a ''
-chatBox.innerHTML = '';
+// chatBox.innerHTML = '';
 
 // 4 --> Per ciascuno dei messaggi.....(ciclo for of)
-for (const message of messages) { // per ognuno dei messaggi creami una variabile messaggio
-    chatBox.innerHTML += `
-    <div class="chat-row ${message.type}">
-            <div class="chat-message">
-                <p>${message.text}</p>
-                <time datetime="${message.time}">
-                    ${message.time}
-                </time>
-            </div>
-        </div>
-    `
-}
+// for (const message of messages) { // per ognuno dei messaggi creami una variabile messaggio
+//     chatBox.innerHTML += `
+//     <div class="chat-row ${message.type}">
+//             <div class="chat-message">
+//                 <p>${message.text}</p>
+//                 <time datetime="${message.time}">
+//                     ${message.time}
+//                 </time>
+//             </div>
+//         </div>
+//     `
+// }
+
+// 13 --> mostro i messaggi in pagina
+showMessages();
 
 // OPERAZIONE DI INTERAZIONE CON L'UTENTE
 
@@ -63,6 +66,38 @@ button.addEventListener('click', function () {
     messages.push(newMessage);
 
     // 3 --> Svuoto la chat tramite innerHTML che è uguale a ''
+    // chatBox.innerHTML = '';
+
+    // 4 --> Per ciascuno dei messaggi.....(ciclo for of)
+    // for (const message of messages) { // per ognuno dei messaggi creami una variabile messaggio
+    //     chatBox.innerHTML += `
+    // <div class="chat-row ${message.type}">
+    //         <div class="chat-message">
+    //             <p>${message.text}</p>
+    //             <time datetime="${message.time}">
+    //                 ${message.time}
+    //             </time>
+    //         </div>
+    //     </div>
+    // `
+    // }
+
+    // 12 --> mostro i messaggi in pagina
+    showMessages();
+
+    // 10 --> svuoto la casella di testo --> input
+    input.value = '';
+    // 11 --> riporto il focus nella casella di testo dopo l'invio del messaggio
+    input.focus();
+})
+
+
+// FUNZIONI UTILI
+
+// 11 --> funzione per mostrare i messaggi in pagina ---> per non ripetere codice inutile come sopra in pagina 
+function showMessages() {
+
+    // 3 --> Svuoto la chat tramite innerHTML che è uguale a ''
     chatBox.innerHTML = '';
 
     // 4 --> Per ciascuno dei messaggi.....(ciclo for of)
@@ -78,10 +113,5 @@ button.addEventListener('click', function () {
         </div>
     `
     }
-
-    // 10 --> svuoto la casella di testo --> input
-    input.value = '';
-    // 11 --> riporto il focus nella casella di testo dopo l'invio del messaggio
-    input.focus();
-})
+}
 
